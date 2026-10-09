@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#0e1512" />
+    <title>Roodkapje — The Forest of Tellings</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 6c-12 0-20 10-20 22 0 6 2 10 4 14l-6 16h44l-6-16c2-4 4-8 4-14 0-12-8-22-20-22z' fill='%23a3141e'/%3E%3Ccircle cx='32' cy='30' r='9' fill='%23f1d2b6'/%3E%3C/svg%3E" />
+    <script type="module" crossorigin src="./assets/index-DN7n0yoo.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Di1-tJoo.css">
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="scene"></canvas>
+      <div id="ui"></div>
+    </div>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <filter id="deckle">
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" seed="7" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="7" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      <filter id="paper-grain">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" />
+        <feColorMatrix values="0 0 0 0 0.35  0 0 0 0 0.25  0 0 0 0 0.12  0 0 0 0.10 0" />
+      </filter>
+    </svg>
+  </body>
+</html>
